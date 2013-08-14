@@ -18,8 +18,8 @@ define tomcat7_rhel::tomcat_application(
   include tomcat7_rhel
 
   $application_dir = "$application_root/$application_name"
-  $tomcat_log = "$application_dir/logs/catalina.out"
-  $catalina_home = "/usr/share/tomcat7"
+  $tomcat_log      = "$application_dir/logs/catalina.out"
+  $catalina_home   = "/usr/share/tomcat7"
 
   File {
     before => Service["$application_name"]
