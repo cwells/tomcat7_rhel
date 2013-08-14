@@ -1,4 +1,4 @@
-define tomcat7_rhel::tomcat_application(
+define tomcat7_rhel::tomcat_application (
   $application_name         = $title,
   $application_root,
   $tomcat_user,
