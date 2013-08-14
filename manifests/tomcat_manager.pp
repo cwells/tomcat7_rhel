@@ -1,10 +1,12 @@
-define tomcat7_rhel::tomcat_manager(
-                                    $tomcat_admin_user,
-                                    $tomcat_admin_password,
-                                    $tomcat_user,
-                                    $application_dir,
-                                    $application_name,
-                                    $tomcat_port) {
+define tomcat7_rhel::tomcat_manager (
+  $tomcat_admin_user,
+  $tomcat_admin_password,
+  $tomcat_user,
+  $application_dir,
+  $application_name,
+  $tomcat_port
+) {
+  
   require tomcat7_rhel::tomcat7_manager_package
 
   file { "$application_dir/conf/Catalina/localhost/manager.xml":
