@@ -9,7 +9,9 @@ are corrupted. As a result, this Puppet module is broken.
 The indices point to Tomcat 7.0.34, whereas the mirrors only contain the version
 7.0.39.
 
-Do not use this project until the JPackage indices are fixed.
+Until this is fixed, best solution is to create a local mirror (with fixed indices) of JPP6, which 
+is what I've done here. Creating a local YUM repo is left as an exercise for the reader.
+
 
 ### Verifying that the indices do not work
 

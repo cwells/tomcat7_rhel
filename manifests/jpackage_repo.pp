@@ -1,10 +1,9 @@
 class tomcat7_rhel::jpackage_repo {
-  yumrepo { "jpackage":
-    descr => "JPackage project",
-    # If the mirror below fails, try another mirror (http://www.jpackage.org/mirroring.php)
-    baseurl => "ftp://jpackage.hmdc.harvard.edu/JPackage/6.0/generic/free/",
-    enabled => 1,
-    gpgcheck => 1,
-    gpgkey => "http://www.jpackage.org/jpackage.asc",
+  yumrepo { "jpp6-beta":
+    descr       => "JPackage JPP 6 repo - fixed",
+    baseurl     => "http://cobbler/cobbler/repo_mirror/jpp6-beta",
+    enabled     => 1,
+    gpgcheck    => 0,
+    includepkgs => 'apache-commons-daemon apache-commons-logging jpackage-utils tomcat7 tomcat7-lib'
   }
 }
