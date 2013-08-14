@@ -11,6 +11,6 @@ class tomcat7_rhel {
 
   package { "tomcat7":
     ensure  => installed,
-    require => [Package['java-1.7.0-openjdk'], Yumrepo['jpackage']]
+    require => [Package['java-1.7.0-openjdk'], Yumrepo['jpp6']]
   }
 }
