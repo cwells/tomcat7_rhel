@@ -15,7 +15,8 @@ class tomcat7_rhel {
     require => [Package['java-1.7.0-openjdk'], Yumrepo['jpp6']]
   }
 
-  service { ['tomcat7']: 
-    ensure => 'running' 
+  service { 'tomcat7': 
+    ensure  => 'running',
+    require => Package['tomcat7']
   }
 }
