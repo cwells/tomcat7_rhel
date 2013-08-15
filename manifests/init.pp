@@ -13,7 +13,7 @@ class tomcat7_rhel {
 
   package { 'tomcat7':
     ensure  => installed,
-    require => [Package['java-1.7.0-openjdk'], Yumrepo[$tomcat7_rhel::params::yumrepo]
+    require => [Package['java-1.7.0-openjdk'], Yumrepo[$tomcat7_rhel::params::yumrepo]]
   }
 
   service { 'tomcat7': 
