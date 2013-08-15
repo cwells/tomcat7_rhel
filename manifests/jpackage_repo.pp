@@ -4,6 +4,6 @@ class tomcat7_rhel::jpackage_repo {
     baseurl     => "http://cobbler/cobbler/repo_mirror/jpp6-beta",
     enabled     => 1,
     gpgcheck    => 0,
-    includepkgs => 'apache-commons* jpackage-utils tomcat7*'
+    includepkgs => 'apache-commons* ecj3 jpackage-utils tomcat7*'
   }
 }
