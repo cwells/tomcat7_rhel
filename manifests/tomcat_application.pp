@@ -31,9 +31,10 @@ define tomcat7_rhel::tomcat_application (
   ], $application_dir)
 
   file { $app_dirs:
-    ensure => directory,
-    owner  => $tomcat_user,
-    group  => $tomcat_user
+    ensure  => directory,
+    owner   => $tomcat_user,
+    group   => $tomcat_user,
+    require => Package['tomcat7']
   }
 
   file { "$application_dir":
