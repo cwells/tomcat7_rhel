@@ -28,7 +28,7 @@ define tomcat7_rhel::tomcat_application (
   $app_dirs = prefix ([ 
     "/bin", "/logs", "/temp", "/webapps", "/work",
     "/conf", "/conf/Catalina", "/conf/Catalina/localhost"
-  ], $catalina_home)
+  ], $application_dir)
 
   file { $app_dirs:
     ensure => directory,
